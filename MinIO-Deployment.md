@@ -7,4 +7,9 @@
 apt update -y
 apt upgrade -y
 ```
-> Tạo phân vùng cho MinIO datastore (/dev/sdb)
+> Tạo phân vùng cho MinIO datastore (/dev/sdb) và chuyển sang dạng LVM
+
+``` shell
+fdisk /dev/sdb
+```
+<img width="666" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/3fa653b9-bda4-425f-b547-affbe5ebe8d7">
