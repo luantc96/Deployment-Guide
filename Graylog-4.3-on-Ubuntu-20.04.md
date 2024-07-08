@@ -119,3 +119,7 @@ Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/gray
 systemctl daemon-reload
 systemctl restart graylog-server
 ```
+#### Truy cập giao diện Web Graylog
+> Truy cập giao diện Web Graylog bằng cách mở trình duyệt và truy cập link http://IP:9000. Kết quả sẽ như sau:
+
+<img width="1679" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/2966741d-dedc-44e1-8605-03079b3c44d8">
