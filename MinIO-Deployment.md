@@ -46,4 +46,10 @@ echo "/dev/vg-minio/lv-minio /minio-data xfs defaults 0 0" >> /etc/fstab
 mount -a
 ```
 
+> Kiểm tra việc init disk đã thành công
+
+``` shell
+df -hT
+```
+<img width="605" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/9557d49a-6b7b-480c-b582-723bdc47cb49">
 
