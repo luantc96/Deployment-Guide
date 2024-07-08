@@ -10,7 +10,7 @@ apt-get update && apt-get upgrade
 
 > Quá trình cài đặt Graylog chúng ta cần tiến hành kiểm tra xem Java OpenJDK đã được cài đặt chưa vì đây là là thứ cần thiết để Graylog có thể hoạt động.
 
-Để kiểm tra xem Java đã được cài đặt hay chưa, hãy chạy lệnh:
+> Để kiểm tra xem Java đã được cài đặt hay chưa, hãy chạy lệnh:
 
 ``` shell
 java -version
