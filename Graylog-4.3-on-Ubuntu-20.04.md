@@ -6,5 +6,5 @@
 apt-get update && apt-get upgrade
 ```
 
-# BƯỚC 1: CÀI ĐẶT JAVA OPENJDK
+### BƯỚC 1: CÀI ĐẶT JAVA OPENJDK
 
