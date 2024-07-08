@@ -26,3 +26,7 @@ java -version
 ```
 ### BƯỚC 2: Cài đặt Elasticsearch
 > Nhập Elasticsearch PGP key bằng cách thực thi lệnh sau:
+``` shell
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+```
+
