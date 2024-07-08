@@ -1,5 +1,7 @@
-![image](https://github.com/luantc96/Deployment-Guide/assets/108060416/4f4e836d-2041-4677-9862-28ab5a4e4107)## HƯỚNG DẪN CÀI ĐẶT MINIO SERVER TRÊN UBUNTU 20.04
+## HƯỚNG DẪN CÀI ĐẶT MINIO SERVER TRÊN UBUNTU 20.04
 > Khuyến khích nên dùng 2 disk để triển khai. 1 disk chạy OS, 1 disk dùng làm datastore cho MinIO. Hướng dẫn này dùng 2 disk.
+>
+> MinIO sử dụng port 9000 cho UI và 9001 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
 
 > Cài đặt Ubuntu Server 20.04 và update hệ thống.
 
