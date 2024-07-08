@@ -130,10 +130,14 @@ mkdir -p /.minio/certs
 touch /.minio/certs/public.crt
 touch /.minio/certs/private.key
 ```
-> Cấp quyền cho user *minio-user* đọc được certificate.
+> Cấp quyền cho user **minio-user** đọc được certificate.
 
 ``` shell
 chown minio-user:minio-user /.minio/certs/public.crt
 chown minio-user:minio-user /.minio/certs/private.key
 ```
+> Restart dịch vụ MinIO
 
+``` shell
+systemctl restart minio.service
+```
