@@ -112,3 +112,10 @@ Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/gray
 > ` # allow binding to 514`
 > 
 > `AmbientCapabilities=CAP_NET_BIND_SERVICE `
+
+> Thực hiện khởi động lại dịch vụ daemon và Graylog:
+
+``` shell
+systemctl daemon-reload
+systemctl restart graylog-server
+```
