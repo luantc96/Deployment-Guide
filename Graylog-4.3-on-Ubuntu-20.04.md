@@ -126,3 +126,10 @@ systemctl restart graylog-server
 
 <img width="1677" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/9cb47e49-ad71-4bfd-aba2-7a70688e5040">
 
+> Như vậy là đã hoàn thành triển khai Graylog Server. Tiếp theo sẽ cấu hình Input để nhận log từ VMware vRealize Operation for Log.
+
+> Vào System >> Input như hình dưới
+
+<img width="1661" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/2fe9855a-e63f-438f-9373-eee499ac1c2d">
+
+
