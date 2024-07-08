@@ -43,7 +43,8 @@ apt -y install elasticsearch-oss
 
 > Tiến hành chỉnh sửa file cấu hình của Elasticsearch /etc/elasticsearch/elasticsearch.yml thêm 2 dòng sau vào cuối file:
 
-cluster.name: graylog
-action.auto_create_index: false
+_cluster.name: graylog_
+
+_action.auto_create_index: false_
 
 
