@@ -47,4 +47,39 @@ _cluster.name: graylog_
 
 _action.auto_create_index: false_
 
+> Thực hiện khởi động lại dịch vụ daemon và Elasticsearch:
 
+``` shell
+systemctl daemon-reload && systemctl restart elasticsearch && systemctl enable elasticsearch
+```
+
+### BƯỚC 3: Cài đặt MongoDB
+
+> Thực thi lệnh sau để tiến hành cài đặt MongoDB:
+
+``` shell
+apt install mongodb-server -y
+```
+> Tiến hành khởi động dịch vụ MongoDB và cho MongoDB khởi động cùng với hệ thống:
+
+``` shell
+systemctl start mongodb && systemctl enable mongodb
+```
+### BƯỚC 4: Cài đặt Graylog
+
+> Thực hiện thêm Graylog repository:
+
+``` shell
+wget https://packages.graylog2.org/repo/packages/graylog-4.3-repository_latest.deb
+```
+> Tiến hành cài đặt Graylog server package:
+
+``` shell
+dpkg -i graylog-4.3-repository_latest.deb
+```
+> Tiến hành cài đặt Graylog:
+
+``` shell
+apt update -y
+apt install graylog-server -y
+```
