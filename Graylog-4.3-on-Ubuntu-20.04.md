@@ -106,3 +106,9 @@ Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/gray
 > Thêm dòng sau vào cuối file /etc/graylog/server/server.conf để bỏ check update Graylog Server
 >
 > `versionchecks = false`
+
+> Mặc định Graylog không sử dụng port 514 default để nhận input log, chúng ta cẩn mở port này để sử dụng: thêm dòng sau vào cuối file /usr/lib/systemd/system/graylog-server.service
+>
+> ` # allow binding to 514`
+> 
+> `AmbientCapabilities=CAP_NET_BIND_SERVICE `
