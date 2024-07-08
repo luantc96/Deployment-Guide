@@ -73,5 +73,22 @@ useradd -M -r -g minio-user minio-user
 chown minio-user:minio-user /minio-data
 ```
 
+> Cấu hình MinIO. Tạo file `/etc/default/minio` bằng trình soạn thảo với nội dung sau:
 
- > Cấu hình MinIO. Tạo file `/etc/default/minio` bằng trình soạn thảo
+``` shell
+#MINIO_ROOT_USER and MINIO_ROOT_PASSWORD sets the root account for the MinIO server.
+# This user has unrestricted permissions to perform S3 and administrative API operations on any resource in the deployment.
+# Omit to use the default values 'minioadmin:minioadmin'.
+# MinIO recommends setting non-default values as a best practice, regardless of environment
+
+MINIO_ROOT_USER=ajinomoto-admin
+MINIO_ROOT_PASSWORD=Svt@@2023
+MINIO_OPTS="--certs-dir /.minio/certs --address :9000 --console-address :9001"
+
+# MINIO_VOLUMES sets the storage volume or path to use for the MinIO server.
+
+MINIO_VOLUMES="/minio-data"
+
+# MINIO_SERVER_URL sets the hostname of the local machine for use with the MinIO Server
+# MinIO assumes your network control plane can correctly resolve this hostname to the local machine
+```
