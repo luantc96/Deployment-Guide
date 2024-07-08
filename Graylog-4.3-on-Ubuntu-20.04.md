@@ -98,5 +98,7 @@ echo -n Welcome..... | sha256sum
 Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/graylog/server/server.conf. Cụ thể:
 >
 > Chỉnh sửa password_secret với chuỗi 96 ký tự ngẫu nhiên mà chúng ta đã tạo trước đó.
+> 
 > Chỉnh sửa root_password_sha2 với hàm băm 64 ký tự của mật khẩu admin.
+> 
 > Chỉnh sửa http_bind_address thành 0.0.0.0:9000
