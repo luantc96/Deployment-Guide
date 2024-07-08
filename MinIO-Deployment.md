@@ -2,6 +2,8 @@
 > Khuyến khích nên dùng 2 disk để triển khai. 1 disk chạy OS, 1 disk dùng làm datastore cho MinIO. Hướng dẫn này dùng 2 disk.
 >
 > MinIO sử dụng port 9000 cho UI và 9001 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
+>
+> Link docs hãng: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html
 
 > Cài đặt Ubuntu Server 20.04 và update hệ thống.
 
