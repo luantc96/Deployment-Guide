@@ -102,3 +102,9 @@ MINIO_SERVER_URL="https://minio.tpcloud.vn:9000"
 # MINIO_SERVER_URL sets the hostname of the local machine for use with the MinIO Server
 # MinIO assumes your network control plane can correctly resolve this hostname to the local machine
 ```
+
+> Start động dịch vụ MinIO và bật khởi động cùng OS
+
+``` shell
+systemctl enable minio.service --now
+```
