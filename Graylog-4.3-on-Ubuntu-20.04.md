@@ -34,5 +34,9 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
 ``` shell
 echo "deb https://artifacts.elastic.co/packages/oss-6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 ```
+> Cập nhật và tiến hành cài đặt Elasticsearch:
 
-
+``` shell
+apt update
+apt -y install elasticsearch-oss
+```
