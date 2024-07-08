@@ -55,3 +55,11 @@ df -hT
 ```
 <img width="605" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/9557d49a-6b7b-480c-b582-723bdc47cb49">
 
+### BƯỚC 2: Cài Đặt MinIO
+
+> Tải gói cài đặt từ trang chủ
+
+``` shell
+wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240628090649.0.0_amd64.deb -O minio.deb
+sudo dpkg -i minio.deb
+```
