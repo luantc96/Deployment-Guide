@@ -13,3 +13,21 @@ apt upgrade -y
 fdisk /dev/sdb
 ```
 <img width="666" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/3fa653b9-bda4-425f-b547-affbe5ebe8d7">
+
+> Tạo Physical Volume
+
+``` shell
+pvcreate /dev/sdb1
+```
+
+> Tạo Volume Group
+
+``` shell
+vgcreate vg-minio /dev/sdb1
+```
+
+> Tạo Logical Volume nhận toàn bộ dung lượng của Physical Volume
+
+``` shell
+lvcreate -n lv-minio -l 100%FREE vg-minio
+```
