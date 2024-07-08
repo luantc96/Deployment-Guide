@@ -83,3 +83,14 @@ dpkg -i graylog-4.3-repository_latest.deb
 apt update -y
 apt install graylog-server -y
 ```
+> Sau khi cài đặt hoàn tất, chúng ta cần tạo một khóa bí mật để bảo mật mật khẩu người dùng. Chạy lệnh sau để tạo khóa bí mật:
+
+``` shell
+pwgen -N 1 -s 96
+```
+
+> Chọn một mật khẩu cho tài khoản admin và mã hóa bằng hàm băm 64 ký tự.
+
+``` shell
+echo -n Welcome..... | sha256sum
+```
