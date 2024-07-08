@@ -43,9 +43,9 @@ apt -y install elasticsearch-oss
 
 > Tiến hành chỉnh sửa file cấu hình của Elasticsearch /etc/elasticsearch/elasticsearch.yml thêm 2 dòng sau vào cuối file:
 
-`_cluster.name: graylog_`
+`cluster.name: graylog`
 
-`_action.auto_create_index: false_`
+`action.auto_create_index: false`
 
 > Thực hiện khởi động lại dịch vụ daemon và Elasticsearch:
 
@@ -102,3 +102,7 @@ Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/gray
 > Chỉnh sửa `root_password_sha2` với hàm băm 64 ký tự của mật khẩu admin.
 > 
 > Chỉnh sửa `http_bind_address` thành 0.0.0.0:9000
+
+> Thêm dòng sau vào cuối file /etc/graylog/server/server.conf để bỏ check update Graylog Server
+>
+> `versionchecks = false`
