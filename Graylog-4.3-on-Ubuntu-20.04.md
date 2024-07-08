@@ -141,5 +141,5 @@ systemctl restart graylog-server
 
 <img width="594" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/6695c0e4-c6b8-46ab-b523-27f9b19c2e6c">
 
-##### Hoàn thành, sau đó cấu hình Log Forwarding trên VMware vRealize Operation for Log và test.
+#### Hoàn thành, sau đó cấu hình Log Forwarding trên VMware vRealize Operation for Log và test.
 
