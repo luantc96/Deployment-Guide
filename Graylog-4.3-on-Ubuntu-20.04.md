@@ -94,3 +94,5 @@ pwgen -N 1 -s 96
 ``` shell
 echo -n Welcome..... | sha256sum
 ```
+> Sau đó chúng ta tiến hành cấu hình Graylog như sau:
+Sử dụng trình soạn thảo để tiến hành chỉnh sửa file /etc/graylog/server/server.conf. Cụ thể:
