@@ -7,6 +7,8 @@
 apt update -y
 apt upgrade -y
 ```
+### BƯỚC 1: Init MinIO Datastore
+
 > Tạo phân vùng cho MinIO datastore (/dev/sdb) và chuyển sang dạng LVM
 
 ``` shell
