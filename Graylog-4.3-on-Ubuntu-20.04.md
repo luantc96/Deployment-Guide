@@ -14,3 +14,8 @@ apt-get update && apt-get upgrade
 ``` shell
 java -version
 ```
+> Nếu chưa cài đặt javajdk chúng ta tiến hành cài đặt javajdk và các gói phụ thuộc bằng lệnh sau:
+
+``` shell
+apt -y install bash-completion apt-transport-https uuid-runtime pwgen openjdk-11-jre-headless
+```
