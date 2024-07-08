@@ -57,9 +57,9 @@ df -hT
 
 ### BƯỚC 2: Cài Đặt MinIO
 
-> Tải gói cài đặt từ trang chủ
+> Tải gói cài đặt từ trang chủ và cài đặt
 
 ``` shell
 wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240628090649.0.0_amd64.deb -O minio.deb
-sudo dpkg -i minio.deb
+dpkg -i minio.deb
 ```
