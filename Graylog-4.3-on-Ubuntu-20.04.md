@@ -37,6 +37,13 @@ echo "deb https://artifacts.elastic.co/packages/oss-6.x/apt stable main" | sudo 
 > Cập nhật và tiến hành cài đặt Elasticsearch:
 
 ``` shell
-apt update
+apt update -y
 apt -y install elasticsearch-oss
 ```
+
+> Tiến hành chỉnh sửa file cấu hình của Elasticsearch /etc/elasticsearch/elasticsearch.yml thêm 2 dòng sau vào cuối file:
+
+cluster.name: graylog
+action.auto_create_index: false
+
+
