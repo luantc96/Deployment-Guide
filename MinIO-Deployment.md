@@ -72,3 +72,6 @@ groupadd -r minio-user
 useradd -M -r -g minio-user minio-user
 chown minio-user:minio-user /minio-data
 ```
+
+
+ > Cấu hình MinIO. Tạo file `/etc/default/minio` bằng trình soạn thảo
