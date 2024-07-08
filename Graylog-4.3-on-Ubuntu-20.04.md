@@ -19,3 +19,10 @@ java -version
 ``` shell
 apt -y install bash-completion apt-transport-https uuid-runtime pwgen openjdk-11-jre-headless
 ```
+> Kiểm tra phiên bản javajdk đã cài đặt:
+
+``` shell
+java -version
+```
+### BƯỚC 2: Cài đặt Elasticsearch
+> Nhập Elasticsearch PGP key bằng cách thực thi lệnh sau:
