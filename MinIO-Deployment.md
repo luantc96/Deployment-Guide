@@ -141,3 +141,4 @@ chown minio-user:minio-user /.minio/certs/private.key
 ``` shell
 systemctl restart minio.service
 ```
+> **Như vậy là hoàn thành cài đặt MinIO, truy cập giao diện quản trị bằng địa chỉ https://minio-url:9000**
