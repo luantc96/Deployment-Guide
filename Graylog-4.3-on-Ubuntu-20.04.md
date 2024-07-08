@@ -132,4 +132,7 @@ systemctl restart graylog-server
 
 <img width="1661" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/2fe9855a-e63f-438f-9373-eee499ac1c2d">
 
+> Select input là **Syslog UDP** và **LUnch new input**
+
+<img width="1094" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/e5d01417-2101-4c45-b3da-832ccc7c0558">
 
