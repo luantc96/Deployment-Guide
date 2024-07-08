@@ -108,3 +108,10 @@ MINIO_SERVER_URL="https://minio.tpcloud.vn:9000"
 ``` shell
 systemctl enable minio.service --now
 ```
+
+> Kiểm tra dịch vụ start thành công
+
+``` shell
+systemctl status minio.service
+```
+<img width="1343" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/236869c9-adcb-48b4-b170-87aecf71d737">
