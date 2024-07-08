@@ -31,3 +31,19 @@ vgcreate vg-minio /dev/sdb1
 ``` shell
 lvcreate -n lv-minio -l 100%FREE vg-minio
 ```
+
+> Định dạng Filesystem là kiểu xfs
+
+``` shell
+mkfs -t xfs /dev/vg-minio/lv-minio
+```
+
+> Tạo Directory chứa dữ liệu MinIO và mount vào LV ở trên
+
+``` shell
+mkdir -p /minio-data
+echo "/dev/vg-minio/lv-minio /minio-data xfs defaults 0 0" >> /etc/fstab
+mount -a
+```
+
+
