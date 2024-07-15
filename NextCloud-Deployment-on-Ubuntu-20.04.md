@@ -9,7 +9,7 @@ apt upgrade -y
 
 ### BƯỚC 1: Cài Đặt LEMP Stack.
 
-> Cài đặt NGINX.
+> 'Cài đặt NGINX.'
 
 ``` shell
 apt install nginx -y
@@ -44,6 +44,8 @@ mysql_secure_installation
 ```
 
 ![image](https://github.com/user-attachments/assets/69f2965c-65d9-474b-ad72-567a88eb627e)
+
+> Cài đặt PHP.
 
 
 ### BƯỚC 3: Cấu Hình SSL Certificate.
