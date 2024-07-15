@@ -267,3 +267,5 @@ server {
 ``` shell
 nginx -t
 ```
+
+> Nếu nhận được thông báo syntax is ok hãy khởi động lại NGINX.
