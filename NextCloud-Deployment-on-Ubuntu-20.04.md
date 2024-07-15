@@ -9,7 +9,7 @@ apt upgrade -y
 
 ### BƯỚC 1: Cài Đặt LEMP Stack.
 
-> 'Cài đặt NGINX.'
+> __Cài đặt NGINX.__
 
 ``` shell
 apt install nginx -y
@@ -23,7 +23,7 @@ systemctl start nginx
 systemctl status nginx
 ```
 
-> Cài đặt MariaDB Database Server.
+> __Cài đặt MariaDB Database Server.__
 
 ``` shell
 apt install mariadb-server mariadb-client -y
@@ -45,32 +45,48 @@ mysql_secure_installation
 
 ![image](https://github.com/user-attachments/assets/69f2965c-65d9-474b-ad72-567a88eb627e)
 
-> Cài đặt PHP.
+> __Cài đặt PHP.__
+
+``` shell
+apt install imagemagick php-imagick php7.4-imagick php7.4-common php7.4-mysql php7.4-fpm php7.4-gd php7.4-json php7.4-curl  php7.4-zip php7.4-xml php7.4-mbstring php7.4-bz2 php7.4-intl php7.4-bcmath php7.4-gmp php7.4-zip
+apt install -y libmagickcore-6.q16-6-extra
+```
+
+> Kích hoạt và khởi động PHP cùng hệ thống.
+
+``` shell
+systemctl enable php7.4-fpm
+systemctl start php7.4-fpm
+systemctl status php7.4-fpm
+```
 
 
-### BƯỚC 3: Cấu Hình SSL Certificate.
+### BƯỚC 2: Cài đặt NextCloud.
 
 > Tạo directory lưu trữ certificate.
 
 ``` shell
-mkdir -p /.minio/certs
+mkdir /ssl_cert
 ```
 
 > Tạo file Certificate và Private key. Sau đó copy nội dung Certificate vào 2 file này.
 
 ``` shell
-touch /.minio/certs/public.crt
-touch /.minio/certs/private.key
+touch /ssl_cert/fullchain.pem
+touch /ssl_cert/privkey.pem
 ```
-> Cấp quyền cho user **minio-user** đọc được certificate.
+> Tải source NextCloud từ trang chủ về.
 
 ``` shell
-chown minio-user:minio-user /.minio/certs/public.crt
-chown minio-user:minio-user /.minio/certs/private.key
+wget https://download.nextcloud.com/server/releases/nextcloud-23.0.3.zip
 ```
-> Restart dịch vụ MinIO
+> Giải nén file NextCloud vừa tải về.
 
 ``` shell
-systemctl restart minio.service
+unzip nextcloud-*.zip -d /usr/share/nginx/
+chown -R www-data:www-data /usr/share/nginx/nextcloud/
 ```
-> **Như vậy là hoàn thành cài đặt MinIO, truy cập giao diện quản trị bằng địa chỉ https://minio-url:9000**
+
+> Tạo Database cho NextCloud.
+
+> Tiếp theo, đăng nhập vào mysql bằng lệnh *mysql* và thực hiện tạo database_name và database_user cho Nextcloud.
