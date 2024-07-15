@@ -268,7 +268,7 @@ server {
 nginx -t
 ```
 
-> Nếu nhận được thông báo syntax is ok hãy khởi động lại NGINX.
+> Nếu nhận được thông báo *syntax is ok* hãy khởi động lại NGINX.
 
 ``` shell
 service nginx restart
@@ -276,4 +276,5 @@ service nginx restart
 
 > Sau khi khởi động lại dịch vụ NGINX. Lúc này có thể mở trình duyệt lên và truy cập vào *https://nextcloud-url* để thực hiện tiếp các bước thiết lập NextCloud.
 
+<img width="513" alt="image" src="https://github.com/user-attachments/assets/6b0e5e1a-2170-47d2-ab02-829e324b3c51">
 
