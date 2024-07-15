@@ -269,3 +269,11 @@ nginx -t
 ```
 
 > Nếu nhận được thông báo syntax is ok hãy khởi động lại NGINX.
+
+``` shell
+service nginx restart
+```
+
+> Sau khi khởi động lại dịch vụ NGINX. Lúc này có thể mở trình duyệt lên và truy cập vào *https://nextcloud-url* để thực hiện tiếp các bước thiết lập NextCloud.
+
+
