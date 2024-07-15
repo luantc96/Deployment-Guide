@@ -262,3 +262,8 @@ server {
     }
 }
 ```
+> Sau khi nhập file cấu hình xong, kiểm tra xem có lỗi không bằng lệnh sau:
+
+``` shell
+nginx -t
+```
