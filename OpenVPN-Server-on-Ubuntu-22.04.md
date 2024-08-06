@@ -43,3 +43,4 @@ cd /root && python3 -m http.server
 
 <img width="877" alt="image" src="https://github.com/user-attachments/assets/1ae4e201-8871-411d-82c1-85c09ee846db">
 
+> Lưu ý: nếu triển khai VPN server behind NAT thì file client phải sửa IP local thành IP Public
