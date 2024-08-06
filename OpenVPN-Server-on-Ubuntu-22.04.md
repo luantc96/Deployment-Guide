@@ -21,3 +21,25 @@ bash openvpn-ubuntu-install.sh
 > 
 <img width="1521" alt="image" src="https://github.com/user-attachments/assets/f7e7ccd8-eaf2-4018-b6e4-d57b23054608">
 
+### BƯỚC 2 (option): Tạo thêm user VPN.
+
+``` shell
+bash openvpn-ubuntu-install.sh
+```
+
+> Chọn Option 1 và đặt username.
+
+<img width="519" alt="image" src="https://github.com/user-attachments/assets/40ff81ae-693c-47af-bc3f-332889f23d0f">
+
+### BƯỚC 3 (option): Tạo link Website Để Tải File Config.
+
+``` shell
+cd /root && python3 -m http.server
+```
+
+![image](https://github.com/user-attachments/assets/7004de9b-e64e-442c-ac6c-aceb617cdfa0)
+
+> Truy cập vào *http://IP:8000* để tải file cấu hình về máy.
+
+<img width="877" alt="image" src="https://github.com/user-attachments/assets/1ae4e201-8871-411d-82c1-85c09ee846db">
+
