@@ -13,7 +13,7 @@ apt upgrade -y
 ```
 ### BƯỚC 1: Init MinIO Datastore.
 
-> Tạo phân vùng cho MinIO datastore (/dev/sdb) và chuyển sang dạng LVM.
+> Tạo phân vùng cho MinIO datastore (/dev/sdb) và chuyển sang dạng LVM. Nếu Thiết kế Linux FileSystems thông thường thì bỏ qua bước init LVM này.
 
 ``` shell
 fdisk /dev/sdb
