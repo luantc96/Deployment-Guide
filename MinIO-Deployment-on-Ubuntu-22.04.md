@@ -64,7 +64,7 @@ df -hT
 > Tải gói cài đặt từ trang chủ và cài đặt.
 
 ``` shell
-wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20241107005220.0.0_amd64.deb -O minio.deb
+wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio-20250613113347.0.0-1.x86_64.rpm -O minio.rpm
 dpkg -i minio.deb
 ```
 <img width="1665" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/d10867af-d5fa-4323-b7a9-559723401baf">
