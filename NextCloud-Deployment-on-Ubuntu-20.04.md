@@ -262,6 +262,16 @@ server {
     }
 }
 ```
+
+> Tối ưu các tham số sau của PHP: *vi /etc/php/7.4/fpm/php.ini*. Sửa các dòng:
+
+``` shell
+memory_limit = 2048G
+upload_max_filesize = 200G
+post_max_size = 200G
+max_execution_time = 3600
+```
+
 > Sau khi nhập file cấu hình xong, kiểm tra xem có lỗi không bằng lệnh sau:
 
 ``` shell
