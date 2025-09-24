@@ -12,7 +12,7 @@ apt upgrade -y
 > __Cài đặt NGINX.__
 
 ``` shell
-apt install nginx -y
+apt install nginx unzip net-tools -y
 ```
 
 > Kích hoạt và khởi động NGINX.
