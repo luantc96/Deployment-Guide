@@ -1,6 +1,6 @@
-## HƯỚNG DẪN CÀI ĐẶT NEXTCLOUD TRÊN UBUNTU 20.04
+## HƯỚNG DẪN CÀI ĐẶT NEXTCLOUD TRÊN UBUNTU 24.04
 
-> Cài đặt Ubuntu Server 20.04 và update hệ thống.
+> Cài đặt Ubuntu Server 24.04 và update hệ thống.
 
 ``` shell
 apt update -y
@@ -48,16 +48,16 @@ mysql_secure_installation
 > __Cài đặt PHP.__
 
 ``` shell
-apt install -y imagemagick php-imagick php7.4-imagick php7.4-common php7.4-mysql php7.4-fpm php7.4-gd php7.4-json php7.4-curl  php7.4-zip php7.4-xml php7.4-mbstring php7.4-bz2 php7.4-intl php7.4-bcmath php7.4-gmp php7.4-zip
+apt install -y php8.3 php8.3-cli php8.3-fpm php8.3-mysql php8.3-curl php8.3-gd php8.3-xml php8.3-mbstring php8.3-bz2 php8.3-intl php8.3-bcmath php8.3-gmp php8.3-zip php8.3-imagick
 apt install -y libmagickcore-6.q16-6-extra
 ```
 
 > Kích hoạt và khởi động PHP cùng hệ thống.
 
 ``` shell
-systemctl enable php7.4-fpm
-systemctl start php7.4-fpm
-systemctl status php7.4-fpm
+systemctl enable php8.3-fpm
+systemctl start php8.3-fpm
+systemctl status php8.3-fpm
 ```
 
 
@@ -78,7 +78,7 @@ touch /ssl_cert/privkey.pem
 > Tải source NextCloud từ trang chủ về.
 
 ``` shell
-wget https://download.nextcloud.com/server/releases/nextcloud-23.0.3.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-29.0.16.zip
 ```
 > Giải nén file NextCloud vừa tải về.
 
@@ -112,7 +112,7 @@ vi /etc/nginx/conf.d/nextcloud.conf
 ``` shell
 upstream php-handler {
     #server 127.0.0.1:9000;
-    server unix:/var/run/php/php7.4-fpm.sock;
+    server unix:/var/run/php/php8.3-fpm.sock;
 }
 
 server {
@@ -263,7 +263,7 @@ server {
 }
 ```
 
-> Tối ưu các tham số sau của PHP: *vi /etc/php/7.4/fpm/php.ini*. Sửa các dòng:
+> Tối ưu các tham số sau của PHP: *vi /etc/php/8.3/fpm/php.ini*. Sửa các dòng:
 
 ``` shell
 memory_limit = 2048G
