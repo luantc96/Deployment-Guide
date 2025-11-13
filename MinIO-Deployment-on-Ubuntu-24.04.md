@@ -9,7 +9,7 @@
 
 ``` shell
 apt update -y && apt upgrade -y
-echo "<public_domain>" >> /etc/hosts
+echo "<IP_server>  <public_domain>" >> /etc/hosts
 ```
 ### BƯỚC 1: Init MinIO Datastore.
 
