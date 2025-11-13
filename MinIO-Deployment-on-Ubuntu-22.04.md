@@ -63,15 +63,7 @@ chown minio-user:minio-user /minio-data
 
 > Cấu hình MinIO. Tạo file `/etc/default/minio` bằng trình soạn thảo với nội dung sau:
 >
-> Cần quan tâm đến các thông số:
->
-> `MINIO_ROOT_USER=` đặt user name.
->
-> `MINIO_ROOT_PASSWORD=` đặt password.
->
-> `MINIO_VOLUMES=` chỉ định nơi lưu trữ data.
->
-> `MINIO_SERVER_URL=` đại chỉ URL public dự kiến sẽ sử dụng.
+
 
 ``` shell
 #MINIO_ROOT_USER and MINIO_ROOT_PASSWORD sets the root account for the MinIO server.
@@ -90,6 +82,16 @@ MINIO_SERVER_URL="https://minio.tpcloud.vn:9000"
 # MINIO_SERVER_URL sets the hostname of the local machine for use with the MinIO Server
 # MinIO assumes your network control plane can correctly resolve this hostname to the local machine
 ```
+
+> Cần quan tâm đến các thông số:
+>
+> `MINIO_ROOT_USER=` đặt user name.
+>
+> `MINIO_ROOT_PASSWORD=` đặt password.
+>
+> `MINIO_VOLUMES=` chỉ định nơi lưu trữ data.
+>
+> `MINIO_SERVER_URL=` đại chỉ URL public dự kiến sẽ sử dụng.
 
 > Start động dịch vụ MinIO và bật khởi động cùng OS.
 
