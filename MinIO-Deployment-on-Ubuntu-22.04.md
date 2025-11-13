@@ -1,54 +1,36 @@
-## HƯỚNG DẪN CÀI ĐẶT MINIO SERVER TRÊN UBUNTU 22.04
+## HƯỚNG DẪN CÀI ĐẶT MINIO SERVER TRÊN UBUNTU 24.04
 > Khuyến khích nên dùng 2 disk để triển khai. 1 disk chạy OS, 1 disk dùng làm datastore cho MinIO. Hướng dẫn này dùng 2 disk.
 >
 > MinIO sử dụng port 9000 cho UI và 9001 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
 >
 > Link docs hãng: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html
 
-> Cài đặt Ubuntu Server 22.04 và update hệ thống.
+> Cài đặt Ubuntu Server 24.04 và update hệ thống.
 
 ``` shell
-apt update -y
-apt upgrade -y
+apt update -y && apt upgrade -y
 ```
 ### BƯỚC 1: Init MinIO Datastore.
 
-> Tạo phân vùng cho MinIO datastore (/dev/sdb) và chuyển sang dạng LVM. Nếu Thiết kế Linux FileSystems thông thường thì bỏ qua bước init LVM này.
+> Tạo phân vùng cho MinIO datastore (/dev/sdb).
 
 ``` shell
 fdisk /dev/sdb
 ```
-<img width="666" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/3fa653b9-bda4-425f-b547-affbe5ebe8d7">
-
-> Tạo Physical Volume.
-
-``` shell
-pvcreate /dev/sdb1
-```
-
-> Tạo Volume Group.
-
-``` shell
-vgcreate vg-minio /dev/sdb1
-```
-
-> Tạo Logical Volume nhận toàn bộ dung lượng của Physical Volume.
-
-``` shell
-lvcreate -n lv-minio -l 100%FREE vg-minio
-```
+<img width="602" height="449" alt="image" src="https://github.com/user-attachments/assets/512bf7b4-8986-40a9-b09b-f375ab319ca4" />
 
 > Định dạng Filesystem là kiểu xfs.
 
 ``` shell
-mkfs -t xfs /dev/vg-minio/lv-minio
+mkfs -t xfs /dev/sdb1
 ```
 
 > Tạo Directory chứa dữ liệu MinIO và mount vào LV ở trên.
 
 ``` shell
 mkdir -p /minio-data
-echo "/dev/vg-minio/lv-minio /minio-data xfs defaults 0 0" >> /etc/fstab
+echo "/dev/sdb1 /minio-data xfs defaults 0 0" >> /etc/fstab
+systemctl daemon-reload
 mount -a
 ```
 
