@@ -8,9 +8,13 @@
 > Cài đặt Ubuntu Server 24.04 và update hệ thống.
 
 ``` shell
-apt update -y && apt upgrade -y
 echo "<IP_server>  <public_domain>" >> /etc/hosts
 ```
+
+``` shell
+apt update -y && apt upgrade -y
+```
+
 ### BƯỚC 1: Init MinIO Datastore.
 
 > Tạo phân vùng cho MinIO datastore (/dev/sdb).
