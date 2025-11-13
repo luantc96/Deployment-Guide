@@ -39,7 +39,8 @@ mount -a
 ``` shell
 df -hT
 ```
-<img width="605" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/9557d49a-6b7b-480c-b582-723bdc47cb49">
+<img width="426" height="198" alt="image" src="https://github.com/user-attachments/assets/3e6e1d42-05be-4adc-9452-96946de3b57a" />
+
 
 ### BƯỚC 2: Cài Đặt MinIO.
 
