@@ -50,7 +50,8 @@ df -hT
 wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230518000536.0.0_amd64.deb -O minio.deb
 dpkg -i minio.deb
 ```
-<img width="1665" alt="image" src="https://github.com/luantc96/Deployment-Guide/assets/108060416/d10867af-d5fa-4323-b7a9-559723401baf">
+<img width="1627" height="323" alt="image" src="https://github.com/user-attachments/assets/ccfd71d7-0269-4654-8b9c-a097e9026db4" />
+
 
 > Tạo User, Group và phân quyền cho MinIO.
 
