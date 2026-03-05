@@ -3,7 +3,7 @@
 >
 > MinIO sử dụng port 9001 cho UI và 9000 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
 >
-> Tạo reccord *.minio.tpcloud.vn để sử dụng được Virtual Path (cá ứng dụng (ví dụ: NAS Sysnology) yêu cầu Minio hỗ trợ dạng này
+> Tạo reccord *.minio.tpcloud.vn để sử dụng được Virtual Path (các ứng dụng (ví dụ: NAS Sysnology) yêu cầu Minio hỗ trợ dạng này
 >
 > Link docs hãng: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html
 
