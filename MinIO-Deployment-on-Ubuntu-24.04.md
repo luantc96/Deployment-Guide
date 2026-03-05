@@ -1,7 +1,9 @@
 ## HƯỚNG DẪN CÀI ĐẶT MINIO SERVER TRÊN UBUNTU 24.04
 > Khuyến khích nên dùng 2 disk để triển khai. 1 disk chạy OS, 1 disk dùng làm datastore cho MinIO. Hướng dẫn này dùng 2 disk.
 >
-> MinIO sử dụng port 9000 cho UI và 9001 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
+> MinIO sử dụng port 9001 cho UI và 9000 cho API. Cần Open 2 port này trên gateway để sử dụng dịch vụ.
+>
+> Tạo reccord *.minio.tpcloud.vn để sử dụng được Virtual Path (cá ứng dụng (ví dụ: NAS Sysnology) yêu cầu Minio hỗ trợ dạng này
 >
 > Link docs hãng: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html
 
@@ -84,6 +86,7 @@ MINIO_OPTS="--certs-dir /.minio/certs --address :9000 --console-address :9001"
 
 MINIO_VOLUMES="/minio-data"
 MINIO_SERVER_URL="https://minio.tpcloud.vn:9000"
+MINIO_DOMAIN=minio.tpcloud.vn
 # MINIO_SERVER_URL sets the hostname of the local machine for use with the MinIO Server
 # MinIO assumes your network control plane can correctly resolve this hostname to the local machine
 ```
@@ -97,6 +100,8 @@ MINIO_SERVER_URL="https://minio.tpcloud.vn:9000"
 > `MINIO_VOLUMES=` chỉ định nơi lưu trữ data.
 >
 > `MINIO_SERVER_URL=` đại chỉ URL public dự kiến sẽ sử dụng.
+>
+> > `MINIO_DOMAIN=` đại chỉ URL public dự kiến sẽ sử dụng.
 
 > Start động dịch vụ MinIO và bật khởi động cùng OS.
 
