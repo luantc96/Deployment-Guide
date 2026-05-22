@@ -523,7 +523,7 @@ E-Mail -> Configuration -> Domains -> Add domain
 
 ```text
 Tên miền: luantc.com
-Mô tả: Mail domain for Kbuor Tech
+Mô tả: Mail domain for LuanTC
 Template: Default
 Thẻ: để trống
 ```
@@ -593,7 +593,7 @@ Thông tin đề xuất:
 
 ```text
 Tên người dùng: admin
-Tên đầy đủ: Kbuor Tech Admin
+Tên đầy đủ: Administrator
 Tên miền: luantc.com
 Template: Default
 Mật khẩu: đặt password mạnh
